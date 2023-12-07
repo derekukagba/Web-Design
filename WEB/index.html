@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>CreatureChronicle</h1>
+       <nav id="footerNav">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#form">Form</a></li>
+        <li><a href="#game">Game</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main>
+       <section id="home">
+    <h2>Welcome to Our Website!</h2>
+    <p>Whether you are an avid animal lover, a curious explorer, or someone seeking valuable insights into the diverse realms of the animal kingdom, you've arrived at the perfect digital haven. Our website is a celebration of the beauty, wonder, and diversity of the creatures that share our planet. From awe-inspiring wildlife facts to heartwarming stories of animal companionship, we invite you to immerse yourself in the captivating tales and information that make the animal world truly extraordinary. </p>
+    <p>Explore the sections above to discover more.</p>
+	<div class="featured-project">
+        <h3>Featured Project: "Animal Lovers"</h3>
+    </div>
+
+    <p>Ready to be inspired? Dive into our gallery, play our mini-game</p>
+    
+    <a href="#gallery" class="cta-button">Explore Gallery</a>
+	
+	<p>Explore more on <a href="page2.html">Page 2</a>.</p>
+</section>
+
+        <section id="gallery">
+    <h2>Image Gallery</h2>
+    <div class="gallery-container">
+	<img src="image1.jpg">
+    <img src="image2.jpg">
+	<img src="image3.jpg">
+	<img src="image4.jpg">
+	<img src="image5.jpg">
+	<img src="image6.jpg">
+    </div>
+    <button onclick="shuffleGallery()">Shuffle Gallery</button>
+</section>
+
+<section id="form">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="validateForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+			 <option value="ger">Germany</option>
+            <option value="ire">Ireland</option>
+            <option value="bra">Brazil</option>
+        </select>
+
+        <div id="formErrors" class="error-message"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+        <section id="game">
+    <h2>Animal Guessing Game</h2>
+    <p>Can you guess the name of the animal?</p>
+    <input type="text" id="guessInput" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Submit Guess</button>
+    <p id="resultMessage"></p>
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+	
+	<footer>
+    <p>&copy; 2023 Your Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
